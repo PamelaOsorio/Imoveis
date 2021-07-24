@@ -4,7 +4,7 @@ var database = 'dados211d';
 // instanciar objeto de acesso ao banco de dados 'dados211d'
 var conexao = mysql.createConnection({
     user:"root",
-    password: "springday12*",
+    password: "",
     host: "localhost",
     port: 3306
 });
