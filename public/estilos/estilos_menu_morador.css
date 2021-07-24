@@ -1,0 +1,39 @@
+
+.menuPrincipal ul li {
+    display: inline;
+    padding-left: 22px;
+    text-align: center;
+}
+
+.menuPrincipal ul li a {
+    color: rgb(41, 7, 233);
+}
+
+.menuPrincipal ul li a:hover {
+    color: rgb(10, 14, 231);
+    font-size: 18px;
+    box-shadow: inset 0 0 1em rgb(247, 246, 245), 0 0 3em rgb(180, 146, 235);/*inset 0 0 1em rgb(153, 0, 255);*/
+}
+
+.menuPrincipal {
+
+    font-size: 18px;
+    padding-left: 5px;
+
+    transition: 0.2s;
+}
+
+#menu_horizontal {
+
+    height: 5%;
+    border: 1px solid rgb(170, 140, 252);;
+    margin: 0.5%;
+   background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(140, 131, 170));
+}
+
+footer{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(142, 131, 170));
+    align-items: center;
+    text-align: center;
+    height: 35px;
+}

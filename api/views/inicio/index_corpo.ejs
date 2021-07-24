@@ -1,0 +1,42 @@
+
+<%- include("../inicio/index_head.ejs") %>
+
+<%- include("../inicio/index_header.ejs") %>
+
+<%- include("../inicio/index_menu_horizontal.ejs") %>
+
+
+<!--
+    corpo da página
+-->
+        <section id="cards">
+          <div id="borda_cards">
+
+            <div class="row">
+              <div class="col-sm-5 offset-md-1">
+                <div class="card" style=" height: 200px" >
+                  <div class="card-body">
+                    <h3 class="card-title">Cadastro do apartamento</h3>
+                    <figure>
+                      <a class="btn btn-danger" href="/apartamentos/novo"> <img src="./imagens/apartmentprin.png" alt="apartamento" width="100" height="100" /> </a>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-5">
+                <div class="card"  style=" height: 200px">
+                  <div class="card-body">
+                    <h3 class="card-title">Cadastro do morador proprietário</h3>
+                    <figure>
+                      <a class="btn btn-danger" href="/moradoresproprietarios/novo"> <img src="./imagens/teamwork.png" alt="moradorproprietario" width="100" height="100" /> </a>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <br>
+        <br>
+<div id="espaco2"></div>
+<%- include("../inicio/index_footer.ejs") %>
+

@@ -1,0 +1,102 @@
+
+<%- include("../apartamentos/apartamentos_head.ejs") %>
+
+<!--
+    corpo da página de edição 
+-->
+
+<div class="alert alert-danger" role="alert">
+    Cadastro do imóvel
+  </div>
+
+
+        <form action="/apartamentos/gravar" method="post">
+
+            <div id="corpo_edit">
+
+                <br>
+                <div class="form-row">
+                    <div class="col-md-1 offset-md-1">
+                        <label> Código </label>
+                        <input type="text" class="form-control" value="<%= obj_apartamentos[0].apt_codigo %>" name="apt_codigo" readonly>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-1 offset-md-1">
+                        <label> Ativo/Inativo </label>
+                        <input type="text" class="form-control" value="<%= obj_apartamentos[0].apt_inativarativar %>" name="apt_inativarativar" maxlength="2" size="5">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3 offset-md-1">
+                        <label> Edifício do apartamento </label>
+                        <input type="text" class="form-control" value="<%= obj_apartamentos[0].apt_edificio %>" name="apt_edificio"  maxlength="20" size="20">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-2 offset-md-1">
+                        <label> Número do apartamento </label>
+                        <input type="text" class="form-control" value="<%= obj_apartamentos[0].apt_numero %>" name="apt_numero" maxlength="10">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-2 offset-md-1">
+                        <label> Andar do apartamento </label>
+                        <input type="text" class="form-control" value="<%= obj_apartamentos[0].apt_andar %>" name="apt_andar" maxlength="2">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-2 offset-md-1">
+                        <label> Número de quartos </label>
+                        <input type="text" class="form-control" value="<%= obj_apartamentos[0].apt_quartos %>" name="apt_quartos" maxlength="2">
+                    </div>
+                </div>
+                <br>
+
+                <div class="form-row">
+                    <div class="col-md-5 offset-md-1">
+                        <label>Nome do proprietario </label>
+                        <select name="mor_codigo" id="mor_codigo" class="form-control form-control-sm" required
+                            aria-describedby="autorHelp" style="width:300px">
+                            <option value=""></option>
+                            <% obj_moradorproprietario.forEach(function(moradorproprietario) { %>
+                                <option <% if (moradorproprietario.mor_codigo==obj_apartamentos[0].mor_codigo) { %> selected="selected" <%
+                                        }%>
+                                        value = "<%= moradorproprietario.mor_codigo %>"><%= moradorproprietario.mor_nome %>
+                                </option>
+                                <% }); %>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div style="padding-top: 5%;">
+
+                </div>
+
+
+            </div>
+
+            <!-- região dos botões de confirmação -->
+
+            <div id="botoes_confirmar">
+                <div class="form-group row">
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary btn-block"> Confirmar </button>
+                    </div>
+
+                    <div class="col-md-2">
+                        <a class="btn btn-secondary btn-block" href="/apartamentos/listar"> Cancelar </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+
+

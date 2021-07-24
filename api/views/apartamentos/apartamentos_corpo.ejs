@@ -1,0 +1,49 @@
+
+<%- include("../apartamentos/apartamentos_head.ejs") %>
+
+<%- include("../apartamentos/apartamentos_menu_horizontal.ejs") %>
+
+<%- include("../apartamentos/apartamentos_filtros.ejs") %>
+
+
+<!--
+    corpo da página
+-->
+        <section id="corpo_rel">
+            <legend> Registros de Apartamentos Cadastrados </legend>
+            <table id="tabela" class="table-striped">
+              <thead id="cabecalho_rel">
+                <tr>
+                  <th id="codigo"> Código </th>
+                  <th id="inativar"> Ativo/Inativo </th>
+                  <th id="edificio"> Edifício </th>
+                  <th id="numero"> Número </th>
+                  <th id="andar"> Andar </th>
+                  <th id="quartos"> Qtde de Quartos </th>
+                  <th id="proprietario"> Proprietário</th>                   
+                  <th id="novo"> <a class="btn btn-danger btn-block" href="/apartamentos/novo">Novo apartamento</a> </th>
+                </tr>
+
+              </thead>
+
+              <tbody id="corpo_rel">
+                <% for(i=0; i<obj_apartamentos.length; i++) {%>
+                  <tr>
+                    <td id="codigo"> <%= obj_apartamentos[i].apt_codigo %> </td>
+                    <td id="inativar"> <%= obj_apartamentos[i].apt_inativarativar %></td>
+                    <td id="edificio"> <%= obj_apartamentos[i].apt_edificio %></td>
+                    <td id="numero"> <%= obj_apartamentos[i].apt_numero %> </td>
+                    <td id="andar"> <%= obj_apartamentos[i].apt_andar %> </td>
+                    <td id="quartos"> <%= obj_apartamentos[i].apt_quartos %> </td>
+                    <td id="proprietario"> <%= obj_apartamentos[i].mor_nome %> </td>
+                    <td id="editar"> <a class="btn btn-primary btn-block" href=<%="/apartamentos/editar/" + obj_apartamentos[i].apt_codigo %>> Editar </a></td>
+                    <td id="ativar"> <a class="btn btn-danger btn-block" href=<%="/apartamentos/ativoInativo/" + obj_apartamentos[i].apt_codigo %>> Inativar </a></td>
+                  </tr>
+                <% } %>
+              </tbody>
+
+            </table>
+        </section>
+                <div id="espaco1"></div>
+
+        <%- include("../apartamentos/apartamentos_footer.ejs") %>

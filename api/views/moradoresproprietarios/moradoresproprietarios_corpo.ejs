@@ -1,0 +1,43 @@
+<%- include("../moradoresproprietarios/moradoresproprietarios_head.ejs") %>
+
+<%- include("../moradoresproprietarios/moradoresproprietarios_menu_horizontal.ejs") %>
+
+<%- include("../moradoresproprietarios/moradoresproprietarios_filtros.ejs") %>
+
+
+<!--
+    corpo da página
+-->
+        <section id="corpo_rel">
+            <legend> Registros de Moradores proprietarios Cadastrados </legend>
+            <table id="tabela" class="table-striped">
+              <thead id="cabecalho_rel">
+                <tr>
+                  <th id="codigo"> Código </th>
+                  <th id="nome"> Nome </th>
+                  <th id="apelido"> Apelido </th>
+                  <th id="celular"> Celular </th>
+                  <th id="cpf"> CPF </th>
+                  <th id="novo"> <a class="btn btn-danger btn-block" href="/moradoresproprietarios/novo">Novo Morador</a> </th>
+                </tr>
+              </thead>
+
+              <tbody id="corpo_rel">
+                <% for(i=0; i<obj_moradorproprietario.length; i++) {%>
+                  <tr>
+                    <td id="codigo"> <%= obj_moradorproprietario[i].mor_codigo %> </td>
+                    <td id="nome"> <%= obj_moradorproprietario[i].mor_nome %> </td>
+                    <td id="apelido"> <%= obj_moradorproprietario[i].mor_apelido %> </td>
+                    <td id="celular"> <%= obj_moradorproprietario[i].mor_celular %> </td>
+                    <td id="cpf"> <%= obj_moradorproprietario[i].mor_cpf %> </td>
+
+                    <td id="editar"> <a class="btn btn-primary btn-block" href=<%="/moradoresproprietarios/editar/" + obj_moradorproprietario[i].mor_codigo %>> Editar </a></td>
+                  </tr>
+                <% } %>
+              </tbody>
+
+            </table>
+        </section>
+<div id="espaco1"></div>
+        <%- include("../moradoresproprietarios/moradoresproprietarios_footer.ejs") %>
+

@@ -1,0 +1,39 @@
+
+  #cab_centro, #cab_direita {
+    border: 1px solid rgb(243, 239, 239);
+    height: 115px;
+}
+
+#logo {
+    max-width: 150px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    margin: 5px;
+}
+
+
+#cards {
+    margin: 0.5%;
+    border: 2px solid rgb(171, 159, 214);
+
+    height: 80%;
+}
+
+#borda_cards {
+    margin: 0.5%;
+}
+
+header {
+    text-align: center;
+    margin: 0.5%;
+	height: 17%;
+}
+
+#espaco2{
+    height: 120px;
+}
+
+body{
+    background-color: rgb(219, 188, 248);
+}

@@ -1,0 +1,81 @@
+<%- include("../moradoresproprietarios/moradoresproprietarios_head.ejs") %>
+
+
+<!--
+    corpo da página de edição
+-->
+
+<div class="alert alert-primary" role="alert">
+    Cadastro do morador proprietario do imóvel
+  </div>
+  
+        <form action="/moradoresproprietarios/gravar" method="post">
+
+            <div id="corpo_edit">
+
+                <br>
+                <div class="form-row">
+                    <div class="col-md-1 offset-md-1">
+                        <label> Código </label>
+                        <input type="text" class="form-control" value="<%= obj_moradorproprietario[0].mor_codigo %>"
+                            name="mor_codigo" readonly>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-4 offset-md-1">
+                        <label> Nome do proprietario </label>
+                        <input type="text" class="form-control" value="<%= obj_moradorproprietario[0].mor_nome %>" name="mor_nome"
+                            maxlength="40">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-2 offset-md-1">
+                        <label> Apelido do proprietario </label>
+                        <input type="text" class="form-control" value="<%= obj_moradorproprietario[0].mor_apelido %>"
+                            name="mor_apelido" maxlength="10">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-2 offset-md-1">
+                        <label> Celular do proprietario </label>
+                        <input type="text" class="form-control" value="<%= obj_moradorproprietario[0].mor_celular %>"
+                            name="mor_celular" maxlength="15">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-4 offset-md-1">
+                        <label> CPF do proprietario </label>
+                        <input type="text" class="form-control" value="<%= obj_moradorproprietario[0].mor_cpf %>" name="mor_cpf"
+                            maxlength="40">
+                    </div>
+                </div>
+
+                <div style="padding-top: 5%;">
+
+                </div>
+
+
+            </div>
+
+            <!-- região dos botões de confirmação -->
+
+            <div id="botoes_confirmar">
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-primary btn-block"> Confirmar </button>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a class="btn btn-secondary btn-block" href="/moradoresproprietarios/listar"> Cancelar </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+
+

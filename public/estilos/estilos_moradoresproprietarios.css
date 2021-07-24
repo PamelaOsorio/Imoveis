@@ -1,0 +1,68 @@
+
+
+#codigo {
+    width: 10%;
+
+} 
+
+#nome {
+    width: 30%;
+} 
+
+#apelido {
+    width: 15%;
+} 
+
+#celular {
+    width: 30%;
+} 
+
+#cpf {
+    width: 20%;
+} 
+
+
+#novo {
+    width: 10%;
+} 
+
+
+body{
+    background-color: rgb(161, 130, 247);
+}
+
+th{
+    background-color: rgb(52, 8, 248);
+}
+
+table{
+    background-color: rgb(103, 70, 250);
+}
+
+#espaco {
+    height: 80px;
+}
+#espaco1 {
+    height: 200px;
+}
+
+
+#filtros {
+    height: 6%;
+    border: 1px solid rgb(161, 130, 247);
+    padding-top: 0.3%;
+    margin: 0.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16;
+    background-color: rgb(103, 70, 250);
+
+}
+
+#btn_executar {
+    font-weight: 200;
+    font-size: 12;
+}
+
+#edit_cod_ini, #edit_cod_fim {
+    width: 20%;
+}
